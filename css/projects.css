@@ -1,0 +1,186 @@
+#projects {
+    position: relative;
+    padding-top: 0;
+}
+
+/* LAYOUT */
+.projects-carousel {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* LEFT TITLE PANEL */
+.project-info-panel h3 {
+    font-size: 4rem;
+    font-weight: 1000;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    background: linear-gradient(90deg, var(--red), var(--orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* VIEWPORT */
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* TRACK */
+.carousel-track {
+    display: flex;
+    gap: 2.5rem;
+    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* CARD BASE */
+
+.carousel-track .project-card {
+    /* Responsive width */
+    width: clamp(240px, 26vw, 300px);
+    height: clamp(250px, 42vw, 220px);
+
+    flex-shrink: 0;
+
+    background: rgba(15, 12, 9, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 140, 0, 0.25);
+    border-radius: 22px;
+
+    padding: 1.8rem 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    cursor: default;
+
+    opacity: 0.35;
+    transform: scale(0.9);
+
+    transition:
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease,
+        background 0.45s ease;
+}
+
+/* SHINE */
+.carousel-track .project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 140, 0, 0.12),
+            transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+/* ACTIVE CARD (CENTER) */
+
+.carousel-track .project-card.active {
+    opacity: 1;
+    transform: scale(1);
+
+    background: rgba(20, 15, 10, 0.7);
+    border-color: rgba(255, 140, 0, 0.65);
+
+    box-shadow:
+        0 20px 50px rgba(255, 140, 0, 0.25),
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* NAVIGATION CARDS */
+
+.carousel-track .project-card.prev,
+.carousel-track .project-card.next {
+    opacity: 0.55;
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.carousel-track .project-card.prev:hover {
+    transform: scale(0.97) translateX(-8px);
+}
+
+.carousel-track .project-card.next:hover {
+    transform: scale(0.97) translateX(8px);
+}
+
+
+/* CONTENT */
+
+.carousel-track .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carousel-track .card-content h3 {
+    font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.carousel-track .card-content p {
+    font-size: clamp(0.85rem, 1vw, 0.95rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    flex-grow: 1;
+}
+
+
+/* BUTTON -VIEW DETAILS */
+
+.carousel-track .view-details-btn {
+    margin-top: 1rem;
+    width: 100%;
+    background: linear-gradient(135deg, var(--red), var(--orange));
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 46, 46, 0.3);
+}
+
+.view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 46, 46, 0.4);
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .projects-carousel {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .project-info-panel {
+        text-align: center;
+    }
+
+    .carousel-track .project-card {
+        min-width: 220px;
+        max-width: 340px;
+    }
+}

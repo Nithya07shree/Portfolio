@@ -1,0 +1,104 @@
+.timeline {
+    border-left: 2px solid var(--red);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -41px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: var(--orange);
+    border-radius: 50%;
+}
+
+.time-content {
+    background: rgba(15, 12, 9, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.time-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 140, 0, 0.1),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.timeline-item:hover .time-content {
+    background: rgba(20, 15, 10, 0.5);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 8px 32px rgba(255, 140, 0, 0.15),
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateX(8px);
+}
+
+.timeline-item:hover .time-content::before {
+    left: 100%;
+}
+
+.time-content h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.timeline-item:hover .time-content h3 {
+    color: var(--orange);
+    text-shadow: 0 0 12px rgba(255, 140, 0, 0.3);
+}
+
+.time-content p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.timeline-item:hover .time-content p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.time-marker {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--orange);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 8px rgba(255, 140, 0, 0.3);
+}
+
+.timeline-item:hover .time-marker {
+    color: var(--red);
+    transform: translateX(4px);
+    text-shadow: 0 0 12px rgba(255, 46, 46, 0.5);
+}

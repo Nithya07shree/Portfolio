@@ -1,0 +1,104 @@
+/* SKILLS MARQUEE */
+.skills-strip {
+    overflow: hidden;
+    padding: 24px 0;
+}
+
+.skills-track {
+    display: flex;
+    gap: 18px;
+    width: max-content;
+    animation: scrollSkills 25s linear infinite;
+}
+
+.skill {
+    padding: 10px 18px;
+    border-radius: 8px;
+    /* almost rectangular */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: var(--orange);
+    border: 1px solid rgba(255, 140, 0, 0.4);
+    background: rgba(15, 10, 5, 0.6);
+    white-space: nowrap;
+}
+
+@keyframes scrollSkills {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    border-color: #FF8C00;
+
+}
+
+/* ACHIEVEMENTS GRID */
+.achievement-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.achievement-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Push top row to the left */
+.row-top {
+    justify-content: flex-start;
+    padding-right: 10%;
+    /* Creates space on the right */
+}
+
+/* Push bottom row to the right */
+.row-bottom {
+    justify-content: flex-end;
+    padding-left: 10%;
+    /* Creates space on the left */
+}
+
+.achievement {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 46, 46, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    width: 45%;
+    /* Keeps cards from stretching too wide */
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+
+.achievement:hover {
+    transform: scale(1.02);
+    border-color: #FF8C00;
+}
+
+@media (max-width: 768px) {
+    .achievement-row {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .achievement {
+        width: 100%;
+    }
+}

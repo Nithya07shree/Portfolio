@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nithyashree R</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <!-- Sections -->
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/timeline.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/achievements.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Stars background -->
+    <canvas id="stars-canvas"></canvas>
+
+    <!-- Email Id -->
+    <a href="mailto:nithya04blr@gmail.com" class="top-email"> nithya04blr@gmail.com </a>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="glitch-text name-assemble" id="name">NITHYASHREE R</h1>
+            <h2 class="roles">AI ARCHITECT | ML ENGINEER | DATA STRATEGIST</h2>
+            <div class="social-icons">
+                <a href="https://github.com/Nithya07shree/" target="_blank"><img src="./assets/images/github.png"
+                        alt="GitHub" loading="lazy" /></a>
+                <a href="https://www.linkedin.com/in/nithyashree-r-a8b614257/" target="_blank"><img
+                        src="./assets/images/linkedin.png" alt="LinkedIn" loading="lazy" /></a>
+                <a href="./assets/resume.pdf" target="_blank"><img src="./assets/images/resume.png" alt="Resume"
+                        loading="lazy" /></a>
+            </div>
+        </div>
+        <div class="hero-location"> <span class="location-dot"></span> BASED IN BENGALURU,<br><br><strong>INDIA</strong>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="about-wrapper">
+            <!-- LEFT PROFILE CARD -->
+            <div class="about-card">
+                <div class="about-avatar"> <img src="./assets/images/profile.png" alt="Nithyashree R" loading="lazy" />
+                </div>
+                <h3 class="about-name">Nithyashree R</h3>
+                <p class="about-role">AI & Data Engineer Intern</p>
+                <p class="about-location">Bengaluru, India</p>
+            </div>
+            <!-- RIGHT CONTENT -->
+            <div class="about-content">
+                <h2 class="about-title"> The <span class="highlight">Architect</span> </h2>
+                <p class="about-description"> I’m an AI Architect and Data Engineer currently locked in at the
+                    intersection of agentic orchestration and massive-scale data systems. Most recently, I was at
+                    Amazon, where I saved the team $10k/month by deleting legacy data and building RAG systems that
+                    actually cleared. I lead AI Brewery, a GenAI lab training 70+ members to dominate hackathons,
+                    building autonomous systems that solve real problems before they hit production. </p> <!-- STATS -->
+                <div class="about-stats">
+                    <div class="stat"> <span class="stat-number">12+</span> <span class="stat-label">Hackathons</span>
+                    </div>
+                    <div class="stat"> <span class="stat-number">5+</span> <span class="stat-label">Honors &
+                            AWARDS</span> </div>
+                    <div class="stat"> <span class="stat-number">50+</span> <span class="stat-label">Team Wins</span>
+                    </div>
+                </div>
+                <!-- CTA BUTTONS -->
+                <div class="about-actions"> <a href="#projects" class="btn-primary">My Work --></a> <a href="#contact"
+                        class="btn-secondary">Let’s Talk!</a> </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="section-padding"> <!-- timeline content -->
+        <h2 class="section-title">Operational <span class="highlight">Timeline</span></h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time-marker">2025 (JUL-DEC)</div>
+                <div class="time-content">
+                    <h3>ABCDE - Intern</h3>
+                    <p>Architected RAG systems for Data Engineering migration. Reduced AWS storage costs by 30%
+                        ($10k/month) by eliminating redundant legacy data.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-marker">2024 - PRES</div>
+                <div class="time-content">
+                    <h3>AI Brewery - Founder & Chief</h3>
+                    <p>Established a College Club/LLM Lab at SIT. Trained 70+ members in GenAI, resulting in 50+
+                        hackathon wins.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-marker">2022 - 2026</div>
+                <div class="time-content">
+                    <h3>Dr. Ambedkar Institute of Technology</h3>
+                    <p>B.E. in Computer Science and Engineering (AI ML).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-padding">
+        <!-- projects carousel -->
+        <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+        <div class="projects-carousel">
+            <!-- LEFT FIXED PANEL -->
+            <div class="project-info-panel">
+                <h3 id="activeProjectTitle">AI Web Architect</h3>
+            </div>
+            <!-- RIGHT MOVING CAROUSEL -->
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <!-- Project Card 1 - Example -->
+                    <div class="project-card" data-title="AI Web Architect"
+                        data-description="Multi-agentic RAG system that generates full websites using Indian voice commands."
+                        data-long-desc="<p>AI Web Architect is an innovative system that leverages multi-agentic RAG (Retrieval-Augmented Generation) architecture to build complete websites from natural language voice commands, specifically optimized for Indian languages.</p><p><strong>Key Features:</strong></p><ul><li>Voice-to-Website conversion using advanced NLP</li><li>Multi-agent orchestration for complex web generation</li><li>Real-time code generation and deployment</li><li>Support for multiple Indian languages</li></ul>"
+                        data-architecture="../context/architecture-placeholder.png"
+                        data-skills="FastAPI, Gemini, VectorDB, Python, RAG, Multi-Agent Systems"
+                        data-github="https://github.com/yourusername/ai-web-architect">
+                        <div class="card-content">
+                            <h3>AI Web Architect</h3>
+                            <p>Multi-agentic RAG system that generates full websites using Indian voice commands.</p>
+                            <button type="button" class="view-details-btn">View Details →</button>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 - Example -->
+                    <div class="project-card" data-title="GRPO RL Customer Prediction"
+                        data-description="RL model predicting food choices via conversational agents and recipe web-crawling."
+                        data-long-desc="<p>An advanced Reinforcement Learning model that predicts customer food preferences through conversational AI agents and intelligent web scraping of recipe databases.</p><p><strong>Key Features:</strong></p><ul><li>Conversational AI for preference gathering</li><li>Automated recipe web-crawling and analysis</li><li>RL-based prediction engine</li><li>Personalized food recommendations</li></ul>"
+                        data-architecture="../context/architecture-placeholder.png"
+                        data-skills="Unsloth, Transformers, CrewAI, Python, Reinforcement Learning"
+                        data-github="https://github.com/yourusername/grpo-rl-prediction">
+                        <div class="card-content">
+                            <h3>GRPO RL Customer Prediction</h3>
+                            <p>RL model predicting food choices via conversational agents and recipe web-crawling.</p>
+                            <button type="button" class="view-details-btn">View Details →</button>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 - Example -->
+                    <div class="project-card" data-title="GRPO RL Customer Prediction"
+                        data-description="RL model predicting food choices via conversational agents and recipe web-crawling."
+                        data-long-desc="<p>An advanced Reinforcement Learning model that predicts customer food preferences through conversational AI agents and intelligent web scraping of recipe databases.</p><p><strong>Key Features:</strong></p><ul><li>Conversational AI for preference gathering</li><li>Automated recipe web-crawling and analysis</li><li>RL-based prediction engine</li><li>Personalized food recommendations</li></ul>"
+                        data-architecture="../context/architecture-placeholder.png"
+                        data-skills="Unsloth, Transformers, CrewAI, Python, Reinforcement Learning"
+                        data-github="https://github.com/yourusername/grpo-rl-prediction">
+                        <div class="card-content">
+                            <h3>GRPO RL Customer Prediction</h3>
+                            <p>RL model predicting food choices via conversational agents and recipe web-crawling.</p>
+                            <button type="button" class="view-details-btn">View Details →</button>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 - Example -->
+                    <div class="project-card" data-title="GRPO RL Customer Prediction"
+                        data-description="RL model predicting food choices via conversational agents and recipe web-crawling."
+                        data-long-desc="<p>An advanced Reinforcement Learning model that predicts customer food preferences through conversational AI agents and intelligent web scraping of recipe databases.</p><p><strong>Key Features:</strong></p><ul><li>Conversational AI for preference gathering</li><li>Automated recipe web-crawling and analysis</li><li>RL-based prediction engine</li><li>Personalized food recommendations</li></ul>"
+                        data-architecture="../context/architecture-placeholder.png"
+                        data-skills="Unsloth, Transformers, CrewAI, Python, Reinforcement Learning"
+                        data-github="https://github.com/yourusername/grpo-rl-prediction">
+                        <div class="card-content">
+                            <h3>GRPO RL Customer Prediction</h3>
+                            <p>RL model predicting food choices via conversational agents and recipe web-crawling.</p>
+                            <button type="button" class="view-details-btn">View Details →</button>
+                        </div>
+                    </div>
+                    <!-- Add more projects by copying the project-card div above and modifying data attributes -->
+                </div>
+            </div>
+        </div>
+        <div id="projectModal" class="modal">
+            <div class="modal-content"> <span class="close" id="closeModalBtn">&times;</span>
+                <h1 id="modalTitle" class="modal-title"></h1>
+                <div id="modalDescription" class="modal-description"></div>
+                <div id="modalArchitecture" class="modal-architecture"></div>
+                <div class="modal-skills-section">
+                    <h3>Key Skills Used</h3>
+                    <div id="modalSkills" class="skills-tags"></div>
+                </div>
+                <div class="modal-links"> <a id="modalGithub" href="#" target="_blank" class="github-link"> <svg
+                            width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg> View on GitHub </a> </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEEMENTS -->
+    <section id="achievements" class="achievements">
+        <!-- SKILLS MARQUEE -->
+        <div class="skills-strip">
+            <div class="skills-track">
+                <span class="skill">GPRO Reinforcement Learning</span>
+                <span class="skill">Multi-Agent Systems</span>
+                <span class="skill">RAG Pipelines</span>
+                <span class="skill">FastAPI</span>
+                <span class="skill">Vector Databases</span>
+                <span class="skill">Distributed Systems</span>
+                <span class="skill">LLM Orchestration</span>
+                <span class="skill">Python</span>
+                <span class="skill">GPRO Reinforcement Learning</span>
+                <span class="skill">Multi-Agent Systems</span>
+                <span class="skill">RAG Pipelines</span>
+                <span class="skill">FastAPI</span>
+                <span class="skill">Vector Databases</span>
+                <span class="skill">Distributed Systems</span>
+                <span class="skill">LLM Orchestration</span>
+                <span class="skill">Python</span>
+            </div>
+        </div>
+        <!-- ACHIEVEMENTS GRID -->
+        <div class="achievement-grid">
+            <div class="achievement-row row-top">
+                <div class="achievement"> <span class="badge">Top 5</span>
+                    <h4>THE BETTER HACK</h4>
+                    <p>GPRO Reinforcement Lorem ipsum dolonctio recusandae ut explicabo quod accusantium ratione.
+                        Learning LLM for behavior analysis </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, repudiandae.</p>
+                </div>
+                <div class="achievement"> <span class="badge">1st Place</span>
+                    <h4>IOT TRACK — NMIT</h4>
+                    <p>NMIT Hacks May 2024 Winner Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore quae
+                        blanditiis inventore dolorum qui beatae nostrum ab doloremque fuga fugit. </p>
+                </div>
+            </div>
+            <div class="achievement-row row-bottom">
+                <div class="achievement">
+                    <h4>METADOME HACKATHON</h4>
+                    <p>Honorary Mention: Multiagentic RAG for preference prediction Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Saepe ipsum suscipit, itaque similique consequuntur beatae commodi
+                        quis placeat a magni.</p>
+                </div>
+                <div class="achievement">
+                    <h4>SMART INDIA HACKATHON</h4>
+                    <p>3rd Prize Winner at the College Level Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Nam, animi? Dolorum facere aspernatur harum laudantium esse commodi aliquam enim adipisci.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="section-title">INITIALIZE <span class="highlight">CONTACT</span></h2>
+                <p class="protocol-text">Ready to bridge the gap between human intent and machine execution.</p>
+            </div>
+            <div class="contact-terminal">
+                <div class="terminal-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">message_protocol.sys</span>
+                </div>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="input-group"> <label>ID_NAME</label> <input type="text" placeholder="Your Name"
+                                required> </div>
+                        <div class="input-group"> <label>ID_EMAIL</label> <input type="email"
+                                placeholder="email@address.com" required> </div>
+                    </div>
+                    <div class="input-group"> <label>TRANSMISSION_CONTENT</label> <textarea rows="5"
+                            placeholder="Enter your message protocol..."></textarea> </div> <button type="submit"
+                        class="submit-btn"> <span class="btn-text">INITIATE CONNECTION</span> <span
+                            class="btn-shimmer"></span> </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="js/main.js" type="module" defer></script>
+</body>
+
+</html>

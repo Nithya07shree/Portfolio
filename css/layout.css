@@ -1,0 +1,10 @@
+.section-padding {
+    padding: 80px 10%;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 40px;
+}
