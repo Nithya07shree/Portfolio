@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" , shrink-to-fit=no">
     <title>Nithyashree R</title>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -16,7 +16,10 @@
     <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/achievements.css" />
     <link rel="stylesheet" href="css/contact.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Space+Mono:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Space+Mono:wght@400;700&family=Lugrasimo&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -24,22 +27,26 @@
     <!-- Stars background -->
     <canvas id="stars-canvas"></canvas>
 
+    <!-- NAVBAR -->
+    <nav class="glass-navbar">
+        <div class="nav-brand">NR</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
     <!-- Email Id -->
     <a href="mailto:nithya04blr@gmail.com" class="top-email"> nithya04blr@gmail.com </a>
 
     <!-- HERO -->
     <section id="hero" class="hero-section">
         <div class="hero-content">
-            <h1 class="glitch-text name-assemble" id="name">NITHYASHREE R</h1>
-            <h2 class="roles">AI ARCHITECT | ML ENGINEER | DATA STRATEGIST</h2>
-            <div class="social-icons">
-                <a href="https://github.com/Nithya07shree/" target="_blank"><img src="./assets/images/github.png"
-                        alt="GitHub" loading="lazy" /></a>
-                <a href="https://www.linkedin.com/in/nithyashree-r-a8b614257/" target="_blank"><img
-                        src="./assets/images/linkedin.png" alt="LinkedIn" loading="lazy" /></a>
-                <a href="./assets/resume.pdf" target="_blank"><img src="./assets/images/resume.png" alt="Resume"
-                        loading="lazy" /></a>
-            </div>
+            <h1 class="glitch-text" id="name">Nithyashree R</h1>
+            <h2 class="roles">LLMs & FINE-TUNING | VISION AI | FULL STACK DEV</h2>
         </div>
         <div class="hero-location"> <span class="location-dot"></span> BASED IN BENGALURU,<br><br><strong>INDIA</strong>
         </div>
@@ -83,22 +90,6 @@
         <h2 class="section-title">Operational <span class="highlight">Timeline</span></h2>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="time-marker">2025 (JUL-DEC)</div>
-                <div class="time-content">
-                    <h3>ABCDE - Intern</h3>
-                    <p>Architected RAG systems for Data Engineering migration. Reduced AWS storage costs by 30%
-                        ($10k/month) by eliminating redundant legacy data.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="time-marker">2024 - PRES</div>
-                <div class="time-content">
-                    <h3>AI Brewery - Founder & Chief</h3>
-                    <p>Established a College Club/LLM Lab at SIT. Trained 70+ members in GenAI, resulting in 50+
-                        hackathon wins.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
                 <div class="time-marker">2022 - 2026</div>
                 <div class="time-content">
                     <h3>Dr. Ambedkar Institute of Technology</h3>
@@ -130,32 +121,6 @@
                         <div class="card-content">
                             <h3>AI Web Architect</h3>
                             <p>Multi-agentic RAG system that generates full websites using Indian voice commands.</p>
-                            <button type="button" class="view-details-btn">View Details →</button>
-                        </div>
-                    </div>
-                    <!-- Project Card 2 - Example -->
-                    <div class="project-card" data-title="GRPO RL Customer Prediction"
-                        data-description="RL model predicting food choices via conversational agents and recipe web-crawling."
-                        data-long-desc="<p>An advanced Reinforcement Learning model that predicts customer food preferences through conversational AI agents and intelligent web scraping of recipe databases.</p><p><strong>Key Features:</strong></p><ul><li>Conversational AI for preference gathering</li><li>Automated recipe web-crawling and analysis</li><li>RL-based prediction engine</li><li>Personalized food recommendations</li></ul>"
-                        data-architecture="../context/architecture-placeholder.png"
-                        data-skills="Unsloth, Transformers, CrewAI, Python, Reinforcement Learning"
-                        data-github="https://github.com/yourusername/grpo-rl-prediction">
-                        <div class="card-content">
-                            <h3>GRPO RL Customer Prediction</h3>
-                            <p>RL model predicting food choices via conversational agents and recipe web-crawling.</p>
-                            <button type="button" class="view-details-btn">View Details →</button>
-                        </div>
-                    </div>
-                    <!-- Project Card 2 - Example -->
-                    <div class="project-card" data-title="GRPO RL Customer Prediction"
-                        data-description="RL model predicting food choices via conversational agents and recipe web-crawling."
-                        data-long-desc="<p>An advanced Reinforcement Learning model that predicts customer food preferences through conversational AI agents and intelligent web scraping of recipe databases.</p><p><strong>Key Features:</strong></p><ul><li>Conversational AI for preference gathering</li><li>Automated recipe web-crawling and analysis</li><li>RL-based prediction engine</li><li>Personalized food recommendations</li></ul>"
-                        data-architecture="../context/architecture-placeholder.png"
-                        data-skills="Unsloth, Transformers, CrewAI, Python, Reinforcement Learning"
-                        data-github="https://github.com/yourusername/grpo-rl-prediction">
-                        <div class="card-content">
-                            <h3>GRPO RL Customer Prediction</h3>
-                            <p>RL model predicting food choices via conversational agents and recipe web-crawling.</p>
                             <button type="button" class="view-details-btn">View Details →</button>
                         </div>
                     </div>
@@ -237,11 +202,6 @@
                     <p>Honorary Mention: Multiagentic RAG for preference prediction Lorem ipsum dolor sit amet,
                         consectetur adipisicing elit. Saepe ipsum suscipit, itaque similique consequuntur beatae commodi
                         quis placeat a magni.</p>
-                </div>
-                <div class="achievement">
-                    <h4>SMART INDIA HACKATHON</h4>
-                    <p>3rd Prize Winner at the College Level Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Nam, animi? Dolorum facere aspernatur harum laudantium esse commodi aliquam enim adipisci.</p>
                 </div>
             </div>
         </div>

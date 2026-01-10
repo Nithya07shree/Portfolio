@@ -81,7 +81,7 @@
     font-weight: 800;
     color: var(--white);
     margin: 0 0 1.5rem 0;
-    background: linear-gradient(90deg, var(--red), var(--orange));
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

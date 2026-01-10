@@ -19,9 +19,9 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    color: var(--orange);
-    border: 1px solid rgba(255, 140, 0, 0.4);
-    background: rgba(15, 10, 5, 0.6);
+    color: var(--accent-blue);
+    border: 1px solid var(--primary-blue);
+    background: var(--primary-blue-darkest);
     white-space: nowrap;
 }
 
@@ -37,7 +37,7 @@
 
 .skill:hover {
     transform: scale(1.05);
-    border-color: #FF8C00;
+    border-color: var(--primary-blue);
 
 }
 
@@ -72,8 +72,8 @@
 }
 
 .achievement {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 46, 46, 0.2);
+    background: var(--primary-blue-dark);
+    border: 1px solid var(--accent-blue);
     border-radius: 12px;
     padding: 30px;
     width: 45%;
@@ -89,7 +89,7 @@
 
 .achievement:hover {
     transform: scale(1.02);
-    border-color: #FF8C00;
+    border-color: var(--primary-blue);
 }
 
 @media (max-width: 768px) {

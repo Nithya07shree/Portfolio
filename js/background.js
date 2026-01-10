@@ -19,15 +19,15 @@ export function initBackground() {
         canvas.height = window.innerHeight;
     }
 
-    function createStars(count = 70) {
+    function createStars(count = 50) {
         stars = Array.from({ length: count }, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             radius: Math.random() * 0.8 + 0.4,
             speed: Math.random() * 0.4 + 0.1,
             color: Math.random() > 0.75
-                ? "rgba(255,140,0,0.8)"
-                : "rgba(255,255,255,0.8)"
+                ? "rgba(0, 89, 255, 0.8)"
+                : "rgba(255, 255, 255, 0.8)"
         }));
     }
 

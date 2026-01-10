@@ -30,7 +30,7 @@
 }
 
 .about-role {
-    color: var(--orange);
+    color: var(--accent-blue);
     margin-top: 0.5rem;
     letter-spacing: 1px;
 }
@@ -102,7 +102,7 @@
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--red), var(--orange));
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
     color: white;
     padding: 14px 28px;
     border-radius: 10px;

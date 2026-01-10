@@ -19,7 +19,7 @@
     font-weight: 1000;
     line-height: 1.1;
     letter-spacing: -1.5px;
-    background: linear-gradient(90deg, var(--red), var(--orange));
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

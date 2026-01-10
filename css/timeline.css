@@ -1,5 +1,5 @@
 .timeline {
-    border-left: 2px solid var(--red);
+    border-left: 2px solid var(--primary-blue);
     padding-left: 30px;
 }
 
@@ -15,7 +15,7 @@
     top: 10px;
     width: 20px;
     height: 20px;
-    background: var(--orange);
+    background: var(--accent-blue);
     border-radius: 50%;
 }
 
@@ -43,7 +43,7 @@
     height: 100%;
     background: linear-gradient(90deg,
             transparent,
-            rgba(255, 140, 0, 0.1),
+            var(--pale-blue),
             transparent);
     transition: left 0.5s ease;
 }
@@ -70,7 +70,7 @@
 }
 
 .timeline-item:hover .time-content h3 {
-    color: var(--orange);
+    color: var(--primary-blue);
     text-shadow: 0 0 12px rgba(255, 140, 0, 0.3);
 }
 
@@ -89,7 +89,7 @@
 .time-marker {
     font-weight: 700;
     font-size: 0.95rem;
-    color: var(--orange);
+    color: var(--primary-blue);
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-bottom: 4px;

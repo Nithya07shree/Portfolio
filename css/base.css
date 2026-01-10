@@ -3,11 +3,29 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
 :root {
-    --black: #050505;
-    --red: #FF2E2E;
-    --orange: #FF8C00;
+    --black: #0a0a11;
+    --primary-blue-darkest: #012a4a;
+    --primary-blue-dark: #013a63;
+    --primary-blue-main: #01497c;
+    --primary-blue: #014f86;
+    --secondary-blue: #2a6f97;
+    --accent-blue: #468faf;
+    --light-blue: #61a5c2;
+    --pale-blue: #89c2d9;
+    --sky-blue: #a9d6e5;
     --white: #FFFFFF;
+    --text-light: #ffffff;
+    --text-dark: #1b1b1b;
+    --text-blue: var(--primary-blue);
+    --highlight: var(--accent-blue);
 }
 
 .no-motion * {
@@ -16,7 +34,7 @@ html {
 }
 
 body {
-    background-color: var(--black);
+    background-color: #00060f;
     color: var(--white);
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -24,7 +42,7 @@ body {
 }
 
 .highlight {
-    background: linear-gradient(90deg, var(--red), var(--orange));
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -25,7 +25,7 @@ export function initHero() {
             this.y += this.vy;
         }
         draw() {
-            ctx.fillStyle = 'rgba(255,46,46,.5)';
+            ctx.fillStyle = 'rgba(0, 62, 248, 0.5)';
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -65,34 +65,3 @@ export function initHero() {
 
     observer.observe(hero);
 }
-
-export function initNameAssemble() {
-    const el = document.getElementById("name");
-    if (!el) return;
-
-    const text = el.textContent;
-    el.textContent = "";
-
-    [...text].forEach((char, i) => {
-        const span = document.createElement("span");
-        span.textContent = char === " " ? "\u00A0" : char;
-
-        const fromLeft = i % 2 === 0;
-
-        span.style.setProperty(
-            "--from-x",
-            fromLeft ? "-120vw" : "120vw"
-        );
-        span.style.setProperty(
-            "--from-y",
-            `${(Math.random() - 0.5) * 40}px`
-        );
-        span.style.setProperty(
-            "--delay",
-            `${i * 70}ms`
-        );
-
-        el.appendChild(span);
-    });
-}
-

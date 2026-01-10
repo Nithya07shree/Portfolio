@@ -1,8 +1,8 @@
-/* HERO BASE */
+/* BASE */
 
 .hero-section {
     position: relative;
-    height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,12 +10,14 @@
     overflow: hidden;
 }
 
-/* CANVAS / BACKGROUND*/
+/* BACKGROUND */
 
 #neural-canvas {
     position: absolute;
     inset: 0;
     z-index: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* HERO CONTENT */
@@ -26,12 +28,14 @@
 }
 
 #name {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20vh;
+    font-family: 'Lugraismo', sans-serif;
+    font-size: 15vh;
     margin: auto;
+    max-width: 90vw;
 }
 
 .hero-content h1 {
+    overflow-wrap: break-word;
     mix-blend-mode: difference;
 }
 
@@ -39,32 +43,48 @@ h2.roles {
     font-size: 1.3rem;
     letter-spacing: 0.25rem;
     font-family: 'Space Mono', monospace;
-    color: var(--orange);
+    color: var(--accent-blue);
+    max-width: 90vw;
+    overflow-wrap: break-word;
 }
 
-/* SOCIAL ICONS */
+@media (max-width: 1024px) {
+    #name {
+        font-size: 12vh;
+    }
 
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 22px;
+    h2.roles {
+        font-size: 1.1rem;
+        letter-spacing: 0.22rem;
+    }
 }
 
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.25);
+@media (max-width: 768px) {
+    #name.glitch-text {
+        font-size: 10vh;
+        line-height: 1.05;
+    }
 
-    filter: drop-shadow(0 0 8px var(--red));
-    transition: transform 0.2s ease, filter 0.3s ease;
+    h2.roles {
+        font-size: 0.85rem;
+        letter-spacing: 0.18rem;
+        line-height: 1.5;
+    }
 }
 
-.social-icons img:hover {
-    transform: scale(1.14) rotate(-4deg);
-    filter: drop-shadow(0 0 20px var(--orange));
+@media (max-width: 480px) {
+    #name.glitch-text {
+        font-size: 5rem;
+        max-width: 92vw;
+    }
+
+    h2.roles {
+        font-size: 0.75rem;
+        letter-spacing: 0.15rem;
+        line-height: 1.4;
+    }
 }
+
 
 /* TOP RIGHT EMAIL (GLASS) */
 
@@ -73,44 +93,41 @@ h2.roles {
     top: 24px;
     right: 28px;
     z-index: 5;
-
     padding: 11px 20px;
     border-radius: 999px;
-
     font-family: 'Space Mono', monospace;
     font-size: 0.85rem;
     color: white;
     text-decoration: none;
-
-    background: rgba(20, 15, 10, 0.45);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    border: 1px solid rgba(255, 140, 0, 0.35);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
-
+    border: 1px solid #014f86;
     opacity: 0.85;
     transition: all 0.3s ease;
 }
 
 .top-email:hover {
-    color: var(--orange);
-    border-color: rgba(255, 140, 0, 0.7);
     transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 10px 32px rgba(255, 140, 0, 0.25);
+    box-shadow: 0 0 20px #014f86;
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 768px) {
     #name {
-        font-size: 14vh;
+        font-size: 12vh;
     }
 
     .top-email {
         top: 16px;
-        right: 16px;
-        font-size: 0.8rem;
+        right: 18px;
+        font-size: 0.5rem;
+        padding: 8px 14px;
+
+        letter-spacing: 0.05em;
+        opacity: 0.9;
+    }
+
+    .top-email:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
 
@@ -144,23 +161,55 @@ h2.roles {
     color: white;
 }
 
-.name-assemble {
-    display: inline-flex;
-    /* gap: 0.08em; */
-    overflow: hidden;
+/* NAVBAR */
+
+.glass-navbar {
+    position: fixed;
+    top: 24px;
+    left: 28px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    border: 1px solid #014f86;
+    opacity: 0.85;
+    transition: all 0.3s ease;
 }
 
-.name-assemble span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateX(var(--from-x)) translateY(var(--from-y));
-    animation: assemble 1.5s cubic-bezier(.22, 1, .36, 1) forwards;
-    animation-delay: var(--delay);
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
-@keyframes assemble {
-    to {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.12em;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #014f86;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glass-navbar {
+        top: 16px;
+        left: 16px;
+        padding: 10px 16px;
+    }
+
+    .nav-links {
+        display: none;
     }
 }
