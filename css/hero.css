@@ -1,11 +1,8 @@
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO SECTION*/
 
 .hero-section {
     position: relative;
     min-height: 100svh;
-    /* stable mobile viewport */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,9 +10,7 @@
     overflow: hidden;
 }
 
-/* =========================
-   CANVAS BACKGROUND
-========================= */
+/* CANVAS BACKGROUND*/
 
 #neural-canvas {
     position: absolute;
@@ -25,9 +20,7 @@
     z-index: 0;
 }
 
-/* =========================
-   HERO CONTENT
-========================= */
+/* HERO CONTENT*/
 
 .hero-content {
     position: relative;
@@ -35,28 +28,23 @@
     padding: 0 16px;
 }
 
-/* =========================
-   HERO NAME
-========================= */
+/* HERO NAME*/
 
 #name {
     font-family: 'Lugrasimo', cursive;
-    font-size: clamp(3.2rem, 9vw, 7rem);
-    line-height: 1.1;
+    font-size: clamp(3.6rem, 12vw, 8.5rem);
+    line-height: 1.5;
     margin: 0 auto;
-    max-width: 92vw;
+    max-width: 95vw;
     text-align: center;
     overflow-wrap: break-word;
 }
 
-/* Blend mode only on larger screens */
 .hero-content h1 {
     mix-blend-mode: difference;
 }
 
-/* =========================
-   HERO ROLES
-========================= */
+/* HERO ROLES */
 
 h2.roles {
     margin-top: 14px;
@@ -69,9 +57,7 @@ h2.roles {
     text-align: center;
 }
 
-/* =========================
-   TOP EMAIL
-========================= */
+/* TOP EMAIL */
 
 .top-email {
     position: fixed;
@@ -90,9 +76,7 @@ h2.roles {
     opacity: 0.9;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR*/
 
 .glass-navbar {
     position: fixed;
@@ -126,9 +110,7 @@ h2.roles {
     letter-spacing: 0.12em;
 }
 
-/* =========================
-   HERO LOCATION
-========================= */
+/* HERO LOCATION*/
 
 .hero-location {
     position: absolute;
@@ -156,16 +138,22 @@ h2.roles {
     box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
 }
 
-/* =========================
-   HERO RESPONSIVENESS
-   (ONLY HERO-SPECIFIC)
-========================= */
+/* HERO RESPONSIVENESS*/
 
 @media (max-width: 768px) {
+    .hero-section {
+        align-items: flex-start;
+        padding-top: 28vh;
+    }
 
-    /* Android fix */
     .hero-content h1 {
         mix-blend-mode: normal;
+        padding: 0 18px;
+    }
+
+    h2.roles {
+        font-size: clamp(0.9rem, 3.6vw, 1.2rem);
+        letter-spacing: 0.18em;
     }
 
     .top-email {
