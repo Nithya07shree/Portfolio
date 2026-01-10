@@ -1,8 +1,11 @@
-/* BASE */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero-section {
     position: relative;
     min-height: 100svh;
+    /* stable mobile viewport */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,203 +13,172 @@
     overflow: hidden;
 }
 
-/* BACKGROUND */
+/* =========================
+   CANVAS BACKGROUND
+========================= */
 
 #neural-canvas {
     position: absolute;
     inset: 0;
-    z-index: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
 }
 
-/* HERO CONTENT */
+/* =========================
+   HERO CONTENT
+========================= */
 
 .hero-content {
     position: relative;
     z-index: 2;
+    padding: 0 16px;
 }
+
+/* =========================
+   HERO NAME
+========================= */
 
 #name {
-    font-family: 'Lugraismo', sans-serif;
-    font-size: 15vh;
-    margin: auto;
-    max-width: 90vw;
+    font-family: 'Lugrasimo', cursive;
+    font-size: clamp(3.2rem, 9vw, 7rem);
+    line-height: 1.1;
+    margin: 0 auto;
+    max-width: 92vw;
+    text-align: center;
+    overflow-wrap: break-word;
 }
 
+/* Blend mode only on larger screens */
 .hero-content h1 {
-    overflow-wrap: break-word;
     mix-blend-mode: difference;
 }
 
+/* =========================
+   HERO ROLES
+========================= */
+
 h2.roles {
-    font-size: 1.3rem;
-    letter-spacing: 0.25rem;
+    margin-top: 14px;
+    font-size: clamp(0.7rem, 2.8vw, 1.2rem);
+    letter-spacing: 0.18em;
     font-family: 'Space Mono', monospace;
     color: var(--accent-blue);
     max-width: 90vw;
-    overflow-wrap: break-word;
+    line-height: 1.5;
+    text-align: center;
 }
 
-@media (max-width: 1024px) {
-    #name {
-        font-size: 12vh;
-    }
-
-    h2.roles {
-        font-size: 1.1rem;
-        letter-spacing: 0.22rem;
-    }
-}
-
-@media (max-width: 768px) {
-    #name.glitch-text {
-        font-size: 10vh;
-        line-height: 1.05;
-    }
-
-    h2.roles {
-        font-size: 0.85rem;
-        letter-spacing: 0.18rem;
-        line-height: 1.5;
-    }
-}
-
-@media (max-width: 480px) {
-    #name.glitch-text {
-        font-size: 5rem;
-        max-width: 92vw;
-    }
-
-    h2.roles {
-        font-size: 0.75rem;
-        letter-spacing: 0.15rem;
-        line-height: 1.4;
-    }
-}
-
-
-/* TOP RIGHT EMAIL (GLASS) */
+/* =========================
+   TOP EMAIL
+========================= */
 
 .top-email {
     position: fixed;
     top: 24px;
     right: 28px;
     z-index: 5;
-    padding: 11px 20px;
+
+    padding: 10px 18px;
     border-radius: 999px;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.85rem;
-    color: white;
-    text-decoration: none;
-    border: 1px solid #014f86;
-    opacity: 0.85;
-    transition: all 0.3s ease;
-}
-
-.top-email:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 0 20px #014f86;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    #name {
-        font-size: 12vh;
-    }
-
-    .top-email {
-        top: 16px;
-        right: 18px;
-        font-size: 0.5rem;
-        padding: 8px 14px;
-
-        letter-spacing: 0.05em;
-        opacity: 0.9;
-    }
-
-    .top-email:hover {
-        transform: none;
-        box-shadow: none;
-    }
-}
-
-.hero-location {
-    position: absolute;
-    bottom: 32px;
-    left: 32px;
-    z-index: 3;
 
     font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.15rem;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.85);
-
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-.location-dot {
-    width: 10px;
-    height: 10px;
-    margin-top: 4px;
-    border-radius: 50%;
-    background: #00ff88;
-    box-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
-}
-
-.hero-location strong {
+    font-size: 0.8rem;
     color: white;
+
+    border: 1px solid var(--primary-blue);
+    opacity: 0.9;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 .glass-navbar {
     position: fixed;
     top: 24px;
     left: 28px;
     z-index: 5;
+
     display: flex;
     align-items: center;
-    gap: 30px;
-    padding: 11px 20px;
+    gap: 26px;
+
+    padding: 10px 18px;
     border-radius: 999px;
+
     font-family: 'Space Mono', monospace;
-    font-size: 0.85rem;
-    border: 1px solid #014f86;
-    opacity: 0.85;
-    transition: all 0.3s ease;
+    font-size: 0.8rem;
+
+    border: 1px solid var(--primary-blue);
+    opacity: 0.9;
 }
 
-/* Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 18px;
     padding: 0;
     margin: 0;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
     letter-spacing: 0.12em;
-    transition: color 0.25s ease;
 }
 
-.nav-links a:hover {
-    color: #014f86;
-    opacity: 1;
+/* =========================
+   HERO LOCATION
+========================= */
+
+.hero-location {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    z-index: 3;
+
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
 }
 
-/* Responsive */
+.location-dot {
+    width: 9px;
+    height: 9px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background: #00ff88;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+}
+
+/* =========================
+   HERO RESPONSIVENESS
+   (ONLY HERO-SPECIFIC)
+========================= */
+
 @media (max-width: 768px) {
+
+    /* Android fix */
+    .hero-content h1 {
+        mix-blend-mode: normal;
+    }
+
+    .top-email {
+        top: 14px;
+        right: 14px;
+        font-size: 0.65rem;
+        padding: 8px 14px;
+    }
+
     .glass-navbar {
-        top: 16px;
-        left: 16px;
-        padding: 10px 16px;
+        top: 14px;
+        left: 14px;
+        padding: 8px 14px;
     }
 
     .nav-links {
