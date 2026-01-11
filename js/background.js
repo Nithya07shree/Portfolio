@@ -1,25 +1,32 @@
 export function initBackground() {
-    const canvas = document.createElement("canvas");
-    canvas.id = "stars-canvas";
-    document.body.prepend(canvas);
+    const canvas = document.getElementById("stars-canvas");
+    if (!canvas) return;
 
-    const hero = document.getElementById("hero");
+    const hero = document.querySelector(".hero");
     if (!hero) return;
 
     const ctx = canvas.getContext("2d");
+
     let stars = [];
     let started = false;
-
     let rafId = null;
-    let isPaused = false;
     let last = 0;
+    let isPaused = false;
 
     function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        const dpr = window.devicePixelRatio || 1;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
-    function createStars(count = 50) {
+    function createStars(count = 100) {
         stars = Array.from({ length: count }, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
@@ -31,11 +38,11 @@ export function initBackground() {
         }));
     }
 
-    function animateStars(ts) {
+    function animate(ts) {
         if (isPaused) return;
 
         if (ts - last < 40) {
-            rafId = requestAnimationFrame(animateStars);
+            rafId = requestAnimationFrame(animate);
             return;
         }
         last = ts;
@@ -52,35 +59,33 @@ export function initBackground() {
             ctx.fill();
         }
 
-        rafId = requestAnimationFrame(animateStars);
+        rafId = requestAnimationFrame(animate);
     }
 
-    function startStars() {
+    function start() {
         resizeCanvas();
         createStars();
         isPaused = false;
-        rafId = requestAnimationFrame(animateStars);
+        rafId = requestAnimationFrame(animate);
         window.addEventListener("resize", resizeCanvas);
     }
 
-    function handleVisibilityChange() {
+    document.addEventListener("visibilitychange", () => {
         if (document.hidden) {
             isPaused = true;
             if (rafId) cancelAnimationFrame(rafId);
         } else if (started) {
             isPaused = false;
             last = 0;
-            rafId = requestAnimationFrame(animateStars);
+            rafId = requestAnimationFrame(animate);
         }
-    }
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+    });
 
     const observer = new IntersectionObserver(
         ([entry]) => {
             if (entry.isIntersecting && !started) {
                 started = true;
-                startStars();
+                start();
                 observer.disconnect();
             }
         },

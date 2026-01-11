@@ -3,10 +3,25 @@
     padding-top: 0;
 }
 
+.section-padding {
+    padding: 8% 5%;
+}
+
+/* SECTION TITLE */
+.projects-title {
+    font-family: 'Outfit', monospace;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
 /* LAYOUT */
+
 .projects-carousel {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 0.5fr 1.2fr;
     gap: 4rem;
     align-items: center;
     max-width: 1400px;
@@ -14,18 +29,22 @@
 }
 
 /* LEFT TITLE PANEL */
+
 .project-info-panel h3 {
-    font-size: 4rem;
-    font-weight: 1000;
+    font-size: 3rem;
+    font-weight: 400;
     line-height: 1.1;
-    letter-spacing: -1.5px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
+    background: linear-gradient(90deg,
+            #ffffff,
+            #0077b6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-left: 8%;
 }
 
-/* VIEWPORT */
+/* CAROUSEL VIEWPORT */
+
 .carousel-viewport {
     overflow: hidden;
     width: 100%;
@@ -33,6 +52,7 @@
 }
 
 /* TRACK */
+
 .carousel-track {
     display: flex;
     gap: 2.5rem;
@@ -40,24 +60,16 @@
     will-change: transform;
 }
 
-/* CARD BASE */
+/* PROJECT CARD BASE */
 
 .carousel-track .project-card {
-    /* Responsive width */
     width: clamp(240px, 26vw, 300px);
     height: clamp(250px, 42vw, 220px);
-
     flex-shrink: 0;
-
-    background: rgba(15, 12, 9, 0.45);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255, 140, 0, 0.25);
+    background: rgba(1, 48, 110, 0.18);
+    border: 1px solid rgba(0, 180, 216, 0.477);
     border-radius: 22px;
-
     padding: 1.8rem 1.6rem;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -78,35 +90,39 @@
         background 0.45s ease;
 }
 
-/* SHINE */
+/* =========================
+   SHINE EFFECT
+========================= */
+
 .carousel-track .project-card::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg,
             transparent,
-            rgba(255, 140, 0, 0.12),
+            rgba(0, 180, 216, 0.18),
             transparent);
     transform: translateX(-100%);
     transition: transform 0.6s ease;
 }
 
-/* ACTIVE CARD (CENTER) */
+/* =========================
+   ACTIVE CARD
+========================= */
 
 .carousel-track .project-card.active {
     opacity: 1;
     transform: scale(1);
-
-    background: rgba(20, 15, 10, 0.7);
-    border-color: rgba(255, 140, 0, 0.65);
-
+    border-color: #022d66;
     box-shadow:
-        0 20px 50px rgba(255, 140, 0, 0.25),
-        0 10px 30px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        0 0 6px rgba(0, 97, 216, 0.9),
+        0 0 10px rgba(0, 180, 216, 0.6),
+        0 0 18px rgba(0, 180, 216, 0.3);
 }
 
-/* NAVIGATION CARDS */
+/* =========================
+   ADJACENT CARDS
+========================= */
 
 .carousel-track .project-card.prev,
 .carousel-track .project-card.next {
@@ -116,15 +132,16 @@
 }
 
 .carousel-track .project-card.prev:hover {
-    transform: scale(0.97) translateX(-8px);
+    transform: scale(0.97) translateX(-0.5rem);
 }
 
 .carousel-track .project-card.next:hover {
-    transform: scale(0.97) translateX(8px);
+    transform: scale(0.97) translateX(0.5rem);
 }
 
-
-/* CONTENT */
+/* =========================
+   CARD CONTENT
+========================= */
 
 .carousel-track .card-content {
     display: flex;
@@ -136,38 +153,48 @@
     font-size: clamp(1.1rem, 1.4vw, 1.4rem);
     font-weight: 700;
     line-height: 1.2;
+    color: #ffffff;
 }
 
 .carousel-track .card-content p {
     font-size: clamp(0.85rem, 1vw, 0.95rem);
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.82);
     flex-grow: 1;
 }
 
-
-/* BUTTON -VIEW DETAILS */
+/* =========================
+   VIEW DETAILS BUTTON
+========================= */
 
 .carousel-track .view-details-btn {
     margin-top: 1rem;
     width: 100%;
-    background: linear-gradient(135deg, var(--red), var(--orange));
+
+    background: linear-gradient(135deg,
+            var(--primary-blue),
+            var(--accent-blue));
+
     border: none;
     color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+
     font-weight: 600;
     cursor: pointer;
+
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(255, 46, 46, 0.3);
+    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.35);
 }
 
 .view-details-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 46, 46, 0.4);
+    box-shadow: 0 8px 28px rgba(0, 180, 216, 0.55);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 900px) {
     .projects-carousel {

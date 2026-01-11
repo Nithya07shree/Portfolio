@@ -1,175 +1,108 @@
-/* HERO SECTION*/
-
-.hero-section {
-    position: relative;
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* CANVAS BACKGROUND*/
-
-#neural-canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-/* HERO CONTENT*/
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 0 16px;
-}
-
-/* HERO NAME*/
-
-#name {
-    font-family: 'Lugrasimo', cursive;
-    font-size: clamp(3.6rem, 12vw, 8.5rem);
-    line-height: 1.5;
-    margin: 0 auto;
-    max-width: 95vw;
-    text-align: center;
-    overflow-wrap: break-word;
-}
-
-.hero-content h1 {
-    mix-blend-mode: difference;
-}
-
-/* HERO ROLES */
-
-h2.roles {
-    margin-top: 14px;
-    font-size: clamp(0.7rem, 2.8vw, 1.2rem);
-    letter-spacing: 0.18em;
-    font-family: 'Space Mono', monospace;
-    color: var(--accent-blue);
-    max-width: 90vw;
-    line-height: 1.5;
-    text-align: center;
-}
-
-/* TOP EMAIL */
-
-.top-email {
-    position: fixed;
-    top: 24px;
-    right: 28px;
-    z-index: 5;
-
-    padding: 10px 18px;
-    border-radius: 999px;
-
-    font-family: 'Space Mono', monospace;
-    font-size: 0.8rem;
-    color: white;
-
-    border: 1px solid var(--primary-blue);
-    opacity: 0.9;
-}
-
-/* NAVBAR*/
-
-.glass-navbar {
+.navbar {
     position: fixed;
     top: 24px;
     left: 28px;
     z-index: 5;
-
     display: flex;
     align-items: center;
     gap: 26px;
-
+    border: 1px solid #023e8a;
+    opacity: 0.9;
     padding: 10px 18px;
     border-radius: 999px;
-
     font-family: 'Space Mono', monospace;
-    font-size: 0.8rem;
-
-    border: 1px solid var(--primary-blue);
-    opacity: 0.9;
+    font-size: 1rem;
 }
 
-.nav-links {
-    list-style: none;
+.navbar .nav-links {
     display: flex;
     gap: 18px;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-links a {
     letter-spacing: 0.12em;
 }
 
-/* HERO LOCATION*/
+.nav-links a:hover {
+    color: #00b4d8;
+}
+
+.navbar .nav-logo {
+    max-width: 18px;
+    height: auto;
+}
+
+
+
+/* NAV MAIL */
+.nav-email {
+    position: fixed;
+    top: 24px;
+    right: 28px;
+    z-index: 5;
+    border: 1px solid #023e8a;
+    opacity: 0.9;
+    border-radius: 999px;
+    font-family: 'Space Mono', monospace;
+    padding: 10px 18px;
+    font-size: 1rem;
+}
+
+.nav-email:hover {
+    color: #00b4d8;
+    border-color: #00b4d8;
+}
+
+/* MAIN TEXT */
+.hero {
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-name {
+    font-family: 'sans-serif';
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    /* border: 1px solid white; */
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.7rem, 2.8vw, 1.2rem);
+    /* border: 1px solid white; */
+    letter-spacing: 0.18em;
+    color: #0077b6;
+}
+
+/* LOCATION */
+#location-dot {
+    background: #00ff88;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+    margin-top: 2.8px;
+}
 
 .hero-location {
     position: absolute;
-    bottom: 28px;
-    left: 28px;
+    left: 2rem;
     z-index: 3;
-
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     align-items: flex-start;
-
     font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    line-height: 1.4;
+    font-size: 1rem;
+    letter-spacing: 0.18rem;
     color: rgba(255, 255, 255, 0.85);
-}
-
-.location-dot {
-    width: 9px;
-    height: 9px;
-    margin-top: 4px;
-    border-radius: 50%;
-    background: #00ff88;
-    box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
-}
-
-/* HERO RESPONSIVENESS*/
-
-@media (max-width: 768px) {
-    .hero-section {
-        align-items: flex-start;
-        padding-top: 28vh;
-    }
-
-    .hero-content h1 {
-        mix-blend-mode: normal;
-        padding: 0 18px;
-    }
-
-    h2.roles {
-        font-size: clamp(0.9rem, 3.6vw, 1.2rem);
-        letter-spacing: 0.18em;
-    }
-
-    .top-email {
-        top: 14px;
-        right: 14px;
-        font-size: 0.65rem;
-        padding: 8px 14px;
-    }
-
-    .glass-navbar {
-        top: 14px;
-        left: 14px;
-        padding: 8px 14px;
-    }
-
-    .nav-links {
-        display: none;
-    }
 }

@@ -19,9 +19,8 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    color: var(--accent-blue);
-    border: 1px solid var(--primary-blue);
-    background: var(--primary-blue-darkest);
+    color: #ffffff;
+    border: 1px solid #023e8a;
     white-space: nowrap;
 }
 
@@ -37,7 +36,8 @@
 
 .skill:hover {
     transform: scale(1.05);
-    border-color: var(--primary-blue);
+    border-color: #00b4d8;
+    color: #00b4d8;
 
 }
 
@@ -57,27 +57,21 @@
     width: 100%;
 }
 
-/* Push top row to the left */
 .row-top {
     justify-content: flex-start;
     padding-right: 10%;
-    /* Creates space on the right */
 }
 
-/* Push bottom row to the right */
 .row-bottom {
     justify-content: flex-end;
     padding-left: 10%;
-    /* Creates space on the left */
 }
 
 .achievement {
-    background: var(--primary-blue-dark);
-    border: 1px solid var(--accent-blue);
+    border: 1px solid #023e8a;
     border-radius: 12px;
     padding: 30px;
     width: 45%;
-    /* Keeps cards from stretching too wide */
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -89,7 +83,7 @@
 
 .achievement:hover {
     transform: scale(1.02);
-    border-color: var(--primary-blue);
+    border-color: #00b4d8;
 }
 
 @media (max-width: 768px) {

@@ -2,107 +2,134 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" , shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nithyashree R</title>
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <!-- Sections -->
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/background.css">
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/timeline.css" />
-    <link rel="stylesheet" href="css/projects.css" />
-    <link rel="stylesheet" href="css/modal.css" />
-    <link rel="stylesheet" href="css/achievements.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+
+    <!-- FONTS -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Space+Mono:wght@400;700&family=Lugrasimo&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quintessential&family=Outfit&display=swap"
         rel="stylesheet">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/timeline.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/achievements.css">
+    <link rel="stylesheet" href="./css/contact.css">
 </head>
 
 <body>
-    <!-- Stars background -->
+    <!-- NAVBAR - LOGO & LINKS-->
+    <header class="navbar">
+        <a href="/">
+            <img src="./assets/images/logo.jpg" alt="NR" class="nav-logo">
+        </a>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+            <a href=""></a>
+        </nav>
+    </header>
+
+    <!-- EMAIL -->
+    <a href="mailto:nithya04blr@gmail.com" class="nav-email">nithya04blr@gmail.com</a>
+
+    <!-- HERO - TITLE & SUBS-->
+    <div class="hero">
+        <div class="hero-titles">
+            <h1 class="hero-name">NITHYASHREE R</h1>
+            <p class="hero-subtitle">LLMs & FINE-TUNING | VISION AI | FULL STACK DEV</p>
+        </div>
+    </div>
+
+    <!-- LOCATION DOT -->
+    <p class="hero-location"><span id="location-dot"></span> BASED IN BENGALURU, <strong>INDIA<strong></p>
+
     <canvas id="stars-canvas"></canvas>
-
-    <!-- NAVBAR -->
-    <nav class="glass-navbar">
-        <div class="nav-brand">NR</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- Email Id -->
-    <a href="mailto:nithya04blr@gmail.com" class="top-email"> nithya04blr@gmail.com </a>
-
-    <!-- HERO -->
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1 class="glitch-text" id="name">Nithyashree R</h1>
-            <h2 class="roles">LLMs & FINE-TUNING | VISION AI | FULL STACK DEV</h2>
-        </div>
-        <div class="hero-location"> <span class="location-dot"></span> BASED IN BENGALURU,<br><br><strong>INDIA</strong>
-        </div>
-    </section>
 
     <!-- ABOUT -->
     <section id="about" class="about-section">
-        <div class="about-wrapper">
-            <!-- LEFT PROFILE CARD -->
-            <div class="about-card">
-                <div class="about-avatar"> <img src="./assets/images/profile.png" alt="Nithyashree R" loading="lazy" />
-                </div>
-                <h3 class="about-name">Nithyashree R</h3>
-                <p class="about-role">AI & Data Engineer Intern</p>
-                <p class="about-location">Bengaluru, India</p>
+        <div class="about-content">
+            <p class="about-quote">Create, Refine, Repeat - The Standard is perfection.</p>
+            <div class="about-divider">
             </div>
-            <!-- RIGHT CONTENT -->
-            <div class="about-content">
-                <h2 class="about-title"> The <span class="highlight">Architect</span> </h2>
-                <p class="about-description"> I’m an AI Architect and Data Engineer currently locked in at the
-                    intersection of agentic orchestration and massive-scale data systems. Most recently, I was at
-                    Amazon, where I saved the team $10k/month by deleting legacy data and building RAG systems that
-                    actually cleared. I lead AI Brewery, a GenAI lab training 70+ members to dominate hackathons,
-                    building autonomous systems that solve real problems before they hit production. </p> <!-- STATS -->
-                <div class="about-stats">
-                    <div class="stat"> <span class="stat-number">12+</span> <span class="stat-label">Hackathons</span>
-                    </div>
-                    <div class="stat"> <span class="stat-number">5+</span> <span class="stat-label">Honors &
-                            AWARDS</span> </div>
-                    <div class="stat"> <span class="stat-number">50+</span> <span class="stat-label">Team Wins</span>
-                    </div>
+            <h2 class="about-title"> I'm <strong>Nithya</strong>, </h2>
+            <p class="about-description"> I’m an AI Architect and Data Engineer currently locked in at the
+                intersection of agentic orchestration and massive-scale data systems. Most recently, I was at
+                Amazon, where I saved the team $10k/month by deleting legacy data and building RAG systems that
+                actually cleared. I lead AI Brewery, a GenAI lab training 70+ members to dominate hackathons,
+                building autonomous systems that solve real problems before they hit production. </p>
+            <div class="about-actions">
+                <div class="about-socials">
+                    <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" aria-label="LinkedIn">
+                        <img src="./assets/images/linkedin.png" alt="LinkedIn">
+                    </a>
+
+                    <a href="https://github.com/YOUR_USERNAME" target="_blank" aria-label="GitHub">
+                        <img src="./assets/images/github.png" alt="GitHub">
+                    </a>
                 </div>
-                <div class="about-actions"> <a href="#projects" class="btn-primary">My Work --></a> <a href="#contact"
-                        class="btn-secondary">Let’s Talk!</a> </div>
+
+                <a href="./assets/resume/Nithyashree_R_Resume.pdf" target="_blank" class="resume-btn">
+                    Here’s my resume!!
+                </a>
             </div>
+
+
         </div>
     </section>
 
     <!-- TIMELINE -->
-    <section id="timeline" class="section-padding"> <!-- timeline content -->
-        <h2 class="section-title">Operational <span class="highlight">Timeline</span></h2>
+    <section id="timeline">
+        <h2 class="timeline-title">Key <span class="highlight">Milestones...</span></h2>
         <div class="timeline">
+            <!-- ITEM 1 -->
             <div class="timeline-item">
-                <div class="time-marker">2022 - 2026</div>
-                <div class="time-content">
-                    <h3>Dr. Ambedkar Institute of Technology</h3>
-                    <p>B.E. in Computer Science and Engineering (AI ML).</p>
+                <div class="timeline-marker">
+                    <span class="dot"></span>
+                </div>
+                <div class="timeline-content">
+                    <span class="year">2025 (JUL–DEC)</span>
+                    <div class="timeline-card">
+                        <h3>Dr. Ambedkar Institute of Technology</h3>
+                        <p>B.E. in Computer Science & Engineering (cgpa: 9.2)
+                        </p>
+                    </div>
                 </div>
             </div>
+
+            <!-- ITEM 2 -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="dot"></span>
+                </div>
+                <div class="timeline-content">
+                    <span class="year">2025 (JUL–DEC)</span>
+                    <div class="timeline-card">
+                        <h3>Dr. Ambedkar Institute of Technology</h3>
+                        <p>B.E. in Computer Science & Engineering (cgpa: 9.2)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Other items -->
         </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="section-padding">
         <!-- projects carousel -->
-        <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+        <h2 class="projects-title">My <span class="highlight">Projects</span></h2>
         <div class="projects-carousel">
             <!-- LEFT FIXED PANEL -->
             <div class="project-info-panel">
@@ -121,6 +148,19 @@
                         <div class="card-content">
                             <h3>AI Web Architect</h3>
                             <p>Multi-agentic RAG system that generates full websites using Indian voice commands.</p>
+                            <button type="button" class="view-details-btn">View Details →</button>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 - Example -->
+                    <div class="project-card" data-title="GRPO RL Customer Prediction"
+                        data-description="RL model predicting food choices via conversational agents and recipe web-crawling."
+                        data-long-desc="<p>An advanced Reinforcement Learning model that predicts customer food preferences through conversational AI agents and intelligent web scraping of recipe databases.</p><p><strong>Key Features:</strong></p><ul><li>Conversational AI for preference gathering</li><li>Automated recipe web-crawling and analysis</li><li>RL-based prediction engine</li><li>Personalized food recommendations</li></ul>"
+                        data-architecture="../context/architecture-placeholder.png"
+                        data-skills="Unsloth, Transformers, CrewAI, Python, Reinforcement Learning"
+                        data-github="https://github.com/yourusername/grpo-rl-prediction">
+                        <div class="card-content">
+                            <h3>GRPO RL Customer Prediction</h3>
+                            <p>RL model predicting food choices via conversational agents and recipe web-crawling.</p>
                             <button type="button" class="view-details-btn">View Details →</button>
                         </div>
                     </div>
@@ -207,38 +247,65 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-header">
-                <h2 class="section-title">INITIALIZE <span class="highlight">CONTACT</span></h2>
-                <p class="protocol-text">Ready to bridge the gap between human intent and machine execution.</p>
-            </div>
-            <div class="contact-terminal">
-                <div class="terminal-bar">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">message_protocol.sys</span>
+    <section id="contact">
+        <div class="contact-grid">
+
+            <!-- LEFT CONTENT -->
+            <div class="contact-left">
+                <h2 class="contact-title">Get in Touch</h2>
+                <p class="contact-subtitle">I'd like to hear from you!</p>
+
+                <p class="contact-text">
+                    If you have any inquiries or just want to<br>
+                    say hi, do use the socials below!!
+                </p>
+
+                <div class="contact-email">
+                    <a href="mailto:nithya04blr@gmail.com">nithya04blr@gmail.com</a>
                 </div>
+
+                <div class="contact-socials">
+                    <a href="#"><img src="./assets/images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/images/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="contact-right">
                 <form class="contact-form">
                     <div class="form-row">
-                        <div class="input-group"> <label>ID_NAME</label> <input type="text" placeholder="Your Name"
-                                required> </div>
-                        <div class="input-group"> <label>ID_EMAIL</label> <input type="email"
-                                placeholder="email@address.com" required> </div>
+                        <div>
+                            <label>First Name</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label>Last Name</label>
+                            <input type="text">
+                        </div>
                     </div>
-                    <div class="input-group"> <label>TRANSMISSION_CONTENT</label> <textarea rows="5"
-                            placeholder="Enter your message protocol..."></textarea> </div> <button type="submit"
-                        class="submit-btn"> <span class="btn-text">INITIATE CONNECTION</span> <span
-                            class="btn-shimmer"></span> </button>
+
+                    <div>
+                        <label>Email *</label>
+                        <input type="email" required>
+                    </div>
+
+                    <div>
+                        <label>Message</label>
+                        <textarea rows="4"></textarea>
+                    </div>
+
+                    <button type="submit">Send</button>
                 </form>
             </div>
+
         </div>
     </section>
 
-    <!-- JS -->
-    <script src="js/main.js" type="module" defer></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/main.js" type="module" defer></script>
 </body>
 
 </html>
