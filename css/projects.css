@@ -90,9 +90,7 @@
         background 0.45s ease;
 }
 
-/* =========================
-   SHINE EFFECT
-========================= */
+/* SHINE EFFECT */
 
 .carousel-track .project-card::before {
     content: '';
@@ -106,9 +104,7 @@
     transition: transform 0.6s ease;
 }
 
-/* =========================
-   ACTIVE CARD
-========================= */
+/* ACTIVE CARD */
 
 .carousel-track .project-card.active {
     opacity: 1;
@@ -120,9 +116,7 @@
         0 0 18px rgba(0, 180, 216, 0.3);
 }
 
-/* =========================
-   ADJACENT CARDS
-========================= */
+/* ADJACENT CARDS */
 
 .carousel-track .project-card.prev,
 .carousel-track .project-card.next {
@@ -139,9 +133,7 @@
     transform: scale(0.97) translateX(0.5rem);
 }
 
-/* =========================
-   CARD CONTENT
-========================= */
+/* CARD CONTENT */
 
 .carousel-track .card-content {
     display: flex;
@@ -163,9 +155,7 @@
     flex-grow: 1;
 }
 
-/* =========================
-   VIEW DETAILS BUTTON
-========================= */
+/* VIEW DETAILS BUTTON */
 
 .carousel-track .view-details-btn {
     margin-top: 1rem;
@@ -192,9 +182,7 @@
     box-shadow: 0 8px 28px rgba(0, 180, 216, 0.55);
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 1024px) {
     .projects-title {
@@ -239,17 +227,45 @@
 
     .carousel-viewport {
         overflow-x: auto;
-        padding-bottom: 10px;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 12px;
     }
 
     .carousel-track {
         gap: 1.8rem;
+        transform: none !important;
+        will-change: auto;
     }
 
     .carousel-track .project-card {
-        width: 260px;
+        opacity: 0.55;
+        transform: scale(0.95);
+        cursor: grab;
+        scroll-snap-align: center;
+    }
+
+    .carousel-track .project-card.active {
         opacity: 1;
         transform: scale(1);
+        border-color: #022d66;
+        box-shadow:
+            0 0 6px rgba(0, 97, 216, 0.9),
+            0 0 10px rgba(0, 180, 216, 0.6),
+            0 0 18px rgba(0, 180, 216, 0.3);
+    }
+
+    /* Adjacent cards should NOT move on hover */
+    .carousel-track .project-card.prev,
+    .carousel-track .project-card.next {
+        transform: scale(0.95);
+        cursor: default;
+    }
+
+    .carousel-track .project-card.prev:hover,
+    .carousel-track .project-card.next:hover {
+        transform: scale(0.95);
     }
 }
 
@@ -271,6 +287,8 @@
 
     .carousel-track {
         gap: 1.4rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 
     .carousel-track .project-card {
