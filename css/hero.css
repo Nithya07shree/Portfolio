@@ -145,7 +145,7 @@
     }
 
     .hero-location {
-        top: 80%;
+        top: 85%;
     }
 
     /* Collapse nav links */
@@ -180,6 +180,6 @@
     .hero-location {
         font-size: 0.75rem;
         letter-spacing: 0.12rem;
-        top: 80%;
+        top: 85%;
     }
 }
