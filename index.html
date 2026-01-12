@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               img-src 'self' data: https:;
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               connect-src https://formspree.io;">
+
     <title>Nithyashree R</title>
+    <link rel="icon" href="./public/favicon.ico" type="image/x-icon">
 
     <!-- FONTS -->
     <link
@@ -30,7 +37,7 @@
     <!-- NAVBAR - LOGO & LINKS-->
     <header class="navbar">
         <a href="/">
-            <img src="./assets/images/logo.jpg" alt="NR" class="nav-logo">
+            <img src="./assets/images/logo.png" alt="NR" class="nav-logo">
         </a>
         <nav class="nav-links">
             <a href="#about">About</a>
@@ -290,8 +297,8 @@
                 <p class="contact-subtitle">I'd love to hear from you!</p>
 
                 <p class="contact-text">
-                    Have a project in mind or just want to say hi? Feel free to reach out via the social media channels
-                    below!
+                    Have a project in mind or just want to say hi? Feel free to connect with me on social media or send
+                    a brief message to the right!
                 </p>
 
                 <div class="contact-email">
