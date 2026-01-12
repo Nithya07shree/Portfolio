@@ -135,7 +135,7 @@
     }
 
     .timeline-marker .dot {
-        left: 2rem;
+        left: 2.5rem;
         width: 14px;
         height: 14px;
     }
@@ -176,7 +176,7 @@
     }
 
     .timeline-marker .dot {
-        left: -2.9rem;
+        left: -2.4rem;
         top: 6px;
         width: 12px;
         height: 12px;
@@ -225,7 +225,7 @@
     }
 
     .timeline-marker .dot {
-        left: -2.4rem;
+        left: -2.1rem;
         width: 10px;
         height: 10px;
     }
