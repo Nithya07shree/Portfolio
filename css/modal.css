@@ -23,12 +23,12 @@
 }
 
 .modal-content {
-    background: rgba(15, 12, 9, 0.95);
+    background: rgba(16, 22, 34, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     margin: 3% auto;
     padding: 3rem;
-    border: 1px solid rgba(255, 140, 0, 0.3);
+    border: 1px solid rgba(2, 62, 138, 0.3);
     width: 90%;
     max-width: 900px;
     border-radius: 24px;
@@ -71,17 +71,17 @@
 }
 
 .close:hover {
-    color: var(--red);
-    background: rgba(255, 46, 46, 0.2);
+    color: #0077b6;
+    background: rgba(46, 74, 255, 0.2);
     transform: rotate(90deg);
 }
 
 .modal-title {
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--white);
+    color: #ffffff;
     margin: 0 0 1.5rem 0;
-    background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
+    background: linear-gradient(90deg, #0077b6, #02268a);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -112,7 +112,7 @@
     margin: 2rem 0;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(255, 140, 0, 0.2);
+    border: 1px solid #023e8a;
 }
 
 .modal-architecture img {
@@ -125,11 +125,11 @@
 .modal-skills-section {
     margin: 2rem 0;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 140, 0, 0.2);
+    border-top: 1px solid #023e8a;
 }
 
 .modal-skills-section h3 {
-    color: var(--orange);
+    color: #0077b6;
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -142,9 +142,9 @@
 }
 
 .skill-tag {
-    background: rgba(255, 140, 0, 0.15);
-    border: 1px solid rgba(255, 140, 0, 0.3);
-    color: var(--orange);
+    background: rgba(2, 62, 138, 0.15);
+    border: 1px solid rgba(2, 62, 138, 0.3);
+    color: #ffffff;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -153,8 +153,8 @@
 }
 
 .skill-tag:hover {
-    background: rgba(255, 140, 0, 0.25);
-    border-color: rgba(255, 140, 0, 0.5);
+    background: rgba(2, 62, 138, 0.25);
+    border-color: rgba(2, 62, 138, 0.5);
     transform: translateY(-2px);
 }
 
