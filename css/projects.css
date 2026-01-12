@@ -1,6 +1,7 @@
 #projects {
     position: relative;
     padding-top: 0;
+    scroll-margin-top: 6rem;
 }
 
 .section-padding {

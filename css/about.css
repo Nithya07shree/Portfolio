@@ -3,6 +3,7 @@
     padding: 8% 10%;
     color: white;
     padding-top: 0;
+    scroll-margin-top: 12rem;
 }
 
 /* RIGHT CONTENT */
@@ -93,6 +94,7 @@
 @media (max-width: 1024px) {
     .about-section {
         padding: 6% 8%;
+        scroll-margin-top: 5rem;
     }
 
     .about-quote {
