@@ -65,7 +65,7 @@
 
 .carousel-track .project-card {
     width: clamp(240px, 26vw, 300px);
-    height: clamp(250px, 42vw, 220px);
+    height: clamp(380px, 42vw, 220px);
     flex-shrink: 0;
     background: rgba(1, 48, 110, 0.18);
     border: 1px solid rgba(0, 180, 216, 0.477);
